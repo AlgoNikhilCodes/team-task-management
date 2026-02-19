@@ -1,0 +1,48 @@
+POST http://localhost:3000/users/
+Content-Type: application/json
+
+{
+  "username": "Samartha",
+  "name": "Samartha Singh",
+  "password": "sam123",
+  "role": "member"
+}   
+
+###
+
+POST http://localhost:3000/login/
+Content-Type: application/json
+
+{
+  "username": "Nikhil", 
+  "password": "nikhil123"
+}   
+
+###
+POST http://localhost:3000/tasks/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik5pa2hpbCIsInVzZXJJZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzcxNDkzODIyfQ.WsCDBpzXMIyeJQTdloQiu7u970qF9_Qg77XZQ0bjXH4
+
+{
+  "title": "Fix Login Bug",
+  "description": "Login not working properly",
+  "status": "pending",
+  "assignedTo": 2
+}   
+
+###
+GET http://localhost:3000/tasks/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlJhZ2h1dmVlciIsInVzZXJJZCI6Miwicm9sZSI6Im1lbWJlciIsImlhdCI6MTc3MTQ5NDAyOH0.nIxSbzAs0JVTmyWEblzbXtS60j3GxO6CrINRc9cpQjk
+
+###
+PUT http://localhost:3000/tasks/2
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlJhZ2h1dmVlciIsInVzZXJJZCI6Miwicm9sZSI6Im1lbWJlciIsImlhdCI6MTc3MTQ5NDAyOH0.nIxSbzAs0JVTmyWEblzbXtS60j3GxO6CrINRc9cpQjk
+
+{
+  "status": "in_progress"
+}
+
+###
+DELETE http://localhost:3000/tasks/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik5pa2hpbCIsInVzZXJJZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzcxNDk0MTEwfQ.TyR31t2wLQQnXe31pZxeiNwPvJmiDyJDH0mPJu7raTQ
